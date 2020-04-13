@@ -1,8 +1,8 @@
 <p align="center"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/logo.png" width="100%" alt="logo image"></p>
 
-<p align="center"><a href="https://github.com/trolit/sShuffler/releases/download/v1.0/sShuffler_desktop.zip"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/5.png" width="50%" alt="download image"></a></p>
+<p align="center"><a href="https://github.com/trolit/sShuffler/releases/download/v1.1/sShuffler_desktop.zip"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/5.png" width="50%" alt="download image"></a></p>
 
-Check for viruses <a href="https://www.virustotal.com/gui/url-analysis/u-21a8b47b9674540c4d72916cd0f67bd4f9b659425e80423bd4711e26fa8d0bd9-1586796846/detection">here</a> with VirusTotal.
+Check for viruses <a href="https://www.virustotal.com/gui/url-analysis/u-9e728f005d4938ca844107d17563e5b59933ac5ece9509a575959eccd515ed14-1586804287/detection">here</a> with VirusTotal.
 
 <h4>About</h4>
 
@@ -45,6 +45,8 @@ Snake emoji used as logo belongs to Twitter and is licensed under CC BY 4.0 (<a 
 Download icon belongs to icons8 (<a href="https://icons8.com/icons">source</a>)
 
 sShuffler uses TagLib# to modify track number(<a href="https://github.com/mono/taglib-sharp">source</a>)
+
+Loading icon used in progress panel(<a href="https://loading.io/">source</a>)
 
 <br/>
 <br/>
