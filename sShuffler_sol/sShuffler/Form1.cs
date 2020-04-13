@@ -7,6 +7,18 @@ namespace sShuffler
         public Form1()
         {
             InitializeComponent();
+        private void ToggleButtons()
+        {
+            if(listView_files.Items.Count > 0)
+            {
+                clearBtn.Enabled = true;
+                shuffleBtn.Enabled = true;
+            } else
+            {
+                clearBtn.Enabled = false;
+                shuffleBtn.Enabled = false;
+            }
+        }
         private String BytesToString(long byteCount)
         {
             string[] suf = { "B", "KB", "MB", "GB", "TB", "PB", "EB" }; //Longs run out around EB
