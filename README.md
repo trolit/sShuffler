@@ -28,6 +28,15 @@
 
 <p align="center"><img src="https://github.com/trolit/sShuffler/blob/storage/images/2.PNG" width="70%" alt="sShuffler - log"></p>
 
- Snake emoji used as logo belongs to Twitter and is licensed under CC BY 4.0
+<br/>
+<br/>
+<br/>
+
+Snake emoji used as logo belongs to Twitter and is licensed under CC BY 4.0 (<a href="https://iconify.design/icon-sets/twemoji/snake.html">source</a>)
+
+Download icon belongs to icons8 (<a href="https://icons8.com/icons">source</a>)
+
+<br/>
+<br/>
 
 Template generated using <a href="https://github.com/trolit/EzGitDoc">EzGitDoc</a>
