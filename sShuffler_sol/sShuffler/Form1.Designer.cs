@@ -57,22 +57,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.infoBtn = new System.Windows.Forms.Button();
             this.infoPanel = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.loadingGif = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.progressPanel = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.helpPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startingPointNum)).BeginInit();
             this.manualStartingPointPanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.progressPanel.SuspendLayout();
@@ -394,6 +394,16 @@
             this.infoPanel.TabIndex = 18;
             this.infoPanel.Visible = false;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::sShuffler.Properties.Resources.snake_bgless;
+            this.pictureBox4.Location = new System.Drawing.Point(201, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(85, 57);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 19;
+            this.pictureBox4.TabStop = false;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -414,16 +424,6 @@
             this.loadingGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.loadingGif.TabIndex = 19;
             this.loadingGif.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::sShuffler.Properties.Resources.snake_bgless;
-            this.pictureBox4.Location = new System.Drawing.Point(201, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(85, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -460,25 +460,13 @@
             this.progressPanel.TabIndex = 20;
             this.progressPanel.Visible = false;
             // 
-            // label13
+            // progressBar1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label13.Location = new System.Drawing.Point(261, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(234, 42);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Shuffling";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label15.Location = new System.Drawing.Point(275, 298);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(208, 27);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "Please, wait..";
+            this.progressBar1.Location = new System.Drawing.Point(234, 352);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(272, 23);
+            this.progressBar1.TabIndex = 24;
+            this.progressBar1.Value = 1;
             // 
             // pictureBox3
             // 
@@ -490,13 +478,25 @@
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
             // 
-            // progressBar1
+            // label15
             // 
-            this.progressBar1.Location = new System.Drawing.Point(234, 352);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(272, 23);
-            this.progressBar1.TabIndex = 24;
-            this.progressBar1.Value = 1;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label15.Location = new System.Drawing.Point(275, 298);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(208, 27);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Please, wait..";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label13.Location = new System.Drawing.Point(261, 67);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(234, 42);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Shuffling";
             // 
             // Form1
             // 
@@ -535,8 +535,8 @@
             this.manualStartingPointPanel.PerformLayout();
             this.infoPanel.ResumeLayout(false);
             this.infoPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.progressPanel.ResumeLayout(false);

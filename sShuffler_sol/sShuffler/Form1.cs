@@ -162,7 +162,8 @@ namespace sShuffler
             var dir = "result_" + DateTime.Now.ToString("HH_mm_ss");
             Directory.CreateDirectory(dir);
 
-            Progress<int> progress = new Progress<int>(percentage => progressBar1.Value = percentage);
+            Progress<int> progress = new Progress<int>
+                (percentage => progressBar1.Value = percentage == 0 ? 1 : percentage);
             await Task.Run(() => PerformShuffle(progress, dir));
            
             progressPanel.Visible = false;
