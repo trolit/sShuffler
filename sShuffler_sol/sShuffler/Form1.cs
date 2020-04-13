@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace sShuffler
@@ -22,8 +23,8 @@ namespace sShuffler
 
             // Create structures
             filesNames = new List<string>();
-            filesPaths = new List<string>();   
-
+            filesPaths = new List<string>();
+            
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             pictureBox1.DragEnter += new DragEventHandler(Form1_DragEnter);
             pictureBox1.DragDrop += new DragEventHandler(Form1_DragDrop);
@@ -150,13 +151,29 @@ namespace sShuffler
             helpPanel.Visible = !helpPanel.Visible;
         }
 
-        private void shuffleBtn_Click(object sender, EventArgs e)
+        async private void shuffleBtn_Click(object sender, EventArgs e)
         {
+            progressPanel.Visible = true;
+
+            progressBar1.Minimum = 1;
+            progressBar1.Value = 1;
+            progressBar1.Step = 1;
+
             var dir = "result_" + DateTime.Now.ToString("HH_mm_ss");
             Directory.CreateDirectory(dir);
 
+            Progress<int> progress = new Progress<int>(percentage => progressBar1.Value = percentage);
+            await Task.Run(() => PerformShuffle(progress, dir));
+           
+            progressPanel.Visible = false;
+
+            Process.Start(dir);
+        }
+
+        private void PerformShuffle(IProgress<int> progress, string dir)
+        {
             int poolStartingNum = 1;
-            if(checkBox1.Checked == true)
+            if (checkBox1.Checked == true)
             {
                 poolStartingNum = Convert.ToInt32(startingPointNum.Value);
             }
@@ -167,12 +184,15 @@ namespace sShuffler
             if (poolStartingNum != 1)
             {
                 zerosAmount = ReturnZerosAmount(0);
-            } else
+            }
+            else
             {
                 zerosAmount = ReturnZerosAmount(numPool.Count);
             }
 
             Random rand = new Random();
+
+            int iteration = 1;
 
             foreach (var filePath in filesPaths)
             {
@@ -187,8 +207,9 @@ namespace sShuffler
                 {
                     string stringAfterDot = rawFileName.Substring(rawFileName.IndexOf(".") + 2);
                     newPath = dir + "/" + WriteZeros(zerosAmount, songId) + songId + ". " + stringAfterDot + fi.Extension;
-                    
-                } else
+
+                }
+                else
                 {
                     newPath = dir + "/" + WriteZeros(zerosAmount, songId) + songId + ". " + rawFileName + fi.Extension;
                 }
@@ -201,10 +222,12 @@ namespace sShuffler
                     tlFile.Save();
                 }
 
-                numPool.Remove(songId); 
-            }
+                numPool.Remove(songId);
 
-            Process.Start(dir);
+                progress.Report((int)((double)iteration / filesPaths.Count * 100));
+
+                iteration++;
+            }
         }
 
         private int ReturnZerosAmount(int size)

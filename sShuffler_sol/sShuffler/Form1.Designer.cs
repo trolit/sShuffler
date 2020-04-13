@@ -34,15 +34,14 @@
             this.chSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chExtension = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sShuffler = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.shuffleBtn = new System.Windows.Forms.Button();
             this.totalShuffle = new System.Windows.Forms.Label();
             this.clearBtn = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.consoleLog = new System.Windows.Forms.RichTextBox();
             this.helpBtn = new System.Windows.Forms.Button();
             this.helpPanel = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,18 +55,28 @@
             this.manStartingPointHelpLabel = new System.Windows.Forms.Label();
             this.manualStartingPointPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.infoBtn = new System.Windows.Forms.Button();
             this.infoPanel = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.loadingGif = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.progressPanel = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.helpPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startingPointNum)).BeginInit();
             this.manualStartingPointPanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.progressPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // listView_files
@@ -120,16 +129,6 @@
             this.sShuffler.Text = "Log";
             this.sShuffler.UseMnemonic = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::sShuffler.Properties.Resources.drop;
-            this.pictureBox1.Location = new System.Drawing.Point(381, 148);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 196);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -177,16 +176,6 @@
             this.clearBtn.Text = "RESET";
             this.clearBtn.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::sShuffler.Properties.Resources.snake_bgless;
-            this.pictureBox2.Location = new System.Drawing.Point(-75, 419);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(292, 211);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
             // consoleLog
             // 
             this.consoleLog.DetectUrls = false;
@@ -229,6 +218,16 @@
             this.helpPanel.Size = new System.Drawing.Size(550, 529);
             this.helpPanel.TabIndex = 11;
             this.helpPanel.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.Location = new System.Drawing.Point(104, 501);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(342, 21);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Click again on Help button to close this window.";
             // 
             // label9
             // 
@@ -329,7 +328,7 @@
             this.label10.Font = new System.Drawing.Font("Gadugi", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(351, 508);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 32);
+            this.label10.Size = new System.Drawing.Size(81, 32);
             this.label10.TabIndex = 14;
             this.label10.Text = "only positive \r\ninteger values";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -370,16 +369,6 @@
     "ve\r\nnew songs and you are planning to place\r\nthem at the beginning of the playli" +
     "st.\r\n";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(104, 501);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(342, 21);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Click again on Help button to close this window.";
-            // 
             // infoBtn
             // 
             this.infoBtn.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -405,16 +394,6 @@
             this.infoPanel.TabIndex = 18;
             this.infoPanel.Visible = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::sShuffler.Properties.Resources.snake_bgless;
-            this.pictureBox4.Location = new System.Drawing.Point(201, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(85, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -426,11 +405,105 @@
     "C BY 4.0 and \r\nbelongs to Twitter. For more\r\ndetails see: \r\nhttps://github.com/t" +
     "rolit/sShuffler\r\n\r\n";
             // 
+            // loadingGif
+            // 
+            this.loadingGif.Image = global::sShuffler.Properties.Resources.spin;
+            this.loadingGif.Location = new System.Drawing.Point(234, 144);
+            this.loadingGif.Name = "loadingGif";
+            this.loadingGif.Size = new System.Drawing.Size(272, 126);
+            this.loadingGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.loadingGif.TabIndex = 19;
+            this.loadingGif.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::sShuffler.Properties.Resources.snake_bgless;
+            this.pictureBox4.Location = new System.Drawing.Point(201, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(85, 57);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 19;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::sShuffler.Properties.Resources.snake_bgless;
+            this.pictureBox2.Location = new System.Drawing.Point(-75, 419);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(292, 211);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::sShuffler.Properties.Resources.drop;
+            this.pictureBox1.Location = new System.Drawing.Point(381, 148);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 196);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // progressPanel
+            // 
+            this.progressPanel.BackColor = System.Drawing.Color.Beige;
+            this.progressPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.progressPanel.Controls.Add(this.progressBar1);
+            this.progressPanel.Controls.Add(this.pictureBox3);
+            this.progressPanel.Controls.Add(this.label15);
+            this.progressPanel.Controls.Add(this.label13);
+            this.progressPanel.Controls.Add(this.loadingGif);
+            this.progressPanel.Location = new System.Drawing.Point(244, 48);
+            this.progressPanel.Name = "progressPanel";
+            this.progressPanel.Size = new System.Drawing.Size(720, 442);
+            this.progressPanel.TabIndex = 20;
+            this.progressPanel.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label13.Location = new System.Drawing.Point(261, 67);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(234, 42);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Shuffling";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label15.Location = new System.Drawing.Point(275, 298);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(208, 27);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Please, wait..";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::sShuffler.Properties.Resources.snake_bgless;
+            this.pictureBox3.Location = new System.Drawing.Point(539, 259);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(227, 206);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(234, 352);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(272, 23);
+            this.progressBar1.TabIndex = 24;
+            this.progressBar1.Value = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1182, 553);
+            this.Controls.Add(this.progressPanel);
             this.Controls.Add(this.infoPanel);
             this.Controls.Add(this.infoBtn);
             this.Controls.Add(this.manualStartingPointPanel);
@@ -455,8 +528,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sShuffler - automated random arrangement";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.helpPanel.ResumeLayout(false);
             this.helpPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startingPointNum)).EndInit();
@@ -464,7 +535,13 @@
             this.manualStartingPointPanel.PerformLayout();
             this.infoPanel.ResumeLayout(false);
             this.infoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.progressPanel.ResumeLayout(false);
+            this.progressPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,6 +581,12 @@
         private System.Windows.Forms.Panel infoPanel;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox loadingGif;
+        private System.Windows.Forms.Panel progressPanel;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
