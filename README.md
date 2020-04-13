@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/trolit/sShuffler/blob/storage/images/logo.png" width="100%" alt="logo image"></p>
 
-<p align="center"><img src="https://github.com/trolit/sShuffler/blob/storage/images/5.png" width="50%" alt="download image"></p>
+<p align="center"><a href="https://github.com/trolit/sShuffler/releases/download/v1.0/sShuffler_desktop.zip"><img src="https://github.com/trolit/sShuffler/blob/storage/images/5.png" width="50%" alt="download image"></a></p>
 
 <p align="justify">sShuffler stands for song Shuffler. It is an open source, simple solution that gives playlists second life. If you listen to the songs in the same order(especially while driving a car), sooner or later you will want to reorder it to make it unpredictable. What you can do is use random play function(if your car owns it).. but that might feel too random(you don't want to get the same song N times) or.. try software that reorders playlist for you so you don't have to rename songs manually. Here comes in sShuffler. It generates output with leading zeros that order is strongly observed by most music players.</p>
 
