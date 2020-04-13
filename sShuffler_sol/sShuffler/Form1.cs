@@ -4,6 +4,9 @@ namespace sShuffler
 {
     public partial class Form1 : Form
     {
+        List<string> filesNames;
+        List<string> filesPaths;
+
         public Form1()
         {
             InitializeComponent();
