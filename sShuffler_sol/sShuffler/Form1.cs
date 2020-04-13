@@ -45,6 +45,12 @@ namespace sShuffler
             totalShuffle.Text = "Total songs to sShuffle: " + listView_files.Items.Count;
             ToggleButtons();
         }
+
+        private string GetFileNameWithoutExtension(string file)
+        {
+            return Path.GetFileNameWithoutExtension(file);
+        }
+
         private void ToggleButtons()
         {
             if(listView_files.Items.Count > 0)
