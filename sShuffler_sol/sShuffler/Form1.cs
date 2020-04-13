@@ -10,6 +10,41 @@ namespace sShuffler
         public Form1()
         {
             InitializeComponent();
+        private void Form1_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string file in files)
+            {
+                FileInfo fi = new FileInfo(file);
+                var fileName = GetFileNameWithoutExtension(file);
+                var extension = Path.GetExtension(file);
+                if (extension == ".mp3" || extension == ".wav")
+                {
+                    if (filesNames.Contains(fileName) == false)
+                    {               
+                        filesNames.Add(fileName);
+                        var row = new string[] { fileName, BytesToString(fi.Length), fi.Extension };
+                        var lvi = new ListViewItem(row);
+                        listView_files.Items.Add(lvi);
+                        consoleLog.AppendText(fileName + " added to the list\n\n", Color.Black);
+                        filesPaths.Add(file);
+                    } else if (filesNames.Contains(fileName) == true)
+                    {
+                        consoleLog.AppendText(fileName + " not added: song already on the list\n\n", Color.Red);
+                    }
+                } else
+                {
+                    consoleLog.AppendText(fileName + " not added: incorrect extension\n\n", Color.Red);
+                }
+            }
+            UpdateSchuffleTools();
+        }
+
+        private void UpdateSchuffleTools()
+        {
+            totalShuffle.Text = "Total songs to sShuffle: " + listView_files.Items.Count;
+            ToggleButtons();
+        }
         private void ToggleButtons()
         {
             if(listView_files.Items.Count > 0)
