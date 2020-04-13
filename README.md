@@ -20,7 +20,7 @@ Check for viruses <a href="https://www.virustotal.com/gui/url-analysis/u-9e728f0
 
 <p align="left"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/3.png" width="40%" alt="generate from 1"></p>
 
-<p align="justify">But if needed, you can set manually starting number(when for e.g. you got some new tracks that you want to put at the beginning of the playlist).</p>
+<p align="justify">But if needed, you can set manually starting number(when for e.g. you got some new tracks that you want to put at the beginning of the playlist). Then new tracks order can also be automated but this time without specifying starting point:) </p>
 
 <p align="left"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/4.png" width="40%" alt="generate from N"></p>
 
