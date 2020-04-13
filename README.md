@@ -1,6 +1,6 @@
-<p align="center"><img src="https://github.com/trolit/sShuffler/blob/storage/images/logo.png" width="100%" alt="logo image"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/logo.png" width="100%" alt="logo image"></p>
 
-<p align="center"><a href="https://github.com/trolit/sShuffler/releases/download/v1.0/sShuffler_desktop.zip"><img src="https://github.com/trolit/sShuffler/blob/storage/images/5.png" width="50%" alt="download image"></a></p>
+<p align="center"><a href="https://github.com/trolit/sShuffler/releases/download/v1.0/sShuffler_desktop.zip"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/5.png" width="50%" alt="download image"></a></p>
 
 Check for viruses <a href="https://www.virustotal.com/gui/url-analysis/u-21a8b47b9674540c4d72916cd0f67bd4f9b659425e80423bd4711e26fa8d0bd9-1586796846/detection">here</a> with VirusTotal.
 
@@ -18,19 +18,19 @@ Check for viruses <a href="https://www.virustotal.com/gui/url-analysis/u-21a8b47
 
 <p align="justify">sShuffler generates output like this</p>
 
-<p align="left"><img src="https://github.com/trolit/sShuffler/blob/storage/images/3.png" width="40%" alt="generate from 1"></p>
+<p align="left"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/3.png" width="40%" alt="generate from 1"></p>
 
 <p align="justify">But if needed, you can set manually starting number(when for e.g. you got some new tracks that you want to put at the beginning of the playlist).</p>
 
-<p align="left"><img src="https://github.com/trolit/sShuffler/blob/storage/images/4.png" width="40%" alt="generate from N"></p>
+<p align="left"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/4.png" width="40%" alt="generate from N"></p>
 
 <p align="justify">sShuffler interface looks like this</p>
 
-<p align="center"><img src="https://github.com/trolit/sShuffler/blob/storage/images/1.PNG" width="70%" alt="sShuffler interface"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/1.PNG" width="70%" alt="sShuffler interface"></p>
 
 <p align="justify">In the Log area you will see messages that appear on certain events</p>
 
-<p align="center"><img src="https://github.com/trolit/sShuffler/blob/storage/images/2.PNG" width="70%" alt="sShuffler - log"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/2.PNG" width="70%" alt="sShuffler - log"></p>
 
 <h4>Usage</h4>
 
@@ -44,7 +44,7 @@ Snake emoji used as logo belongs to Twitter and is licensed under CC BY 4.0 (<a 
 
 Download icon belongs to icons8 (<a href="https://icons8.com/icons">source</a>)
 
-sShuffler uses TagLib# to modify track number(<a href="https://github.com/mono/taglib-sharp">source</a>
+sShuffler uses TagLib# to modify track number(<a href="https://github.com/mono/taglib-sharp">source</a>)
 
 <br/>
 <br/>
