@@ -1,6 +1,6 @@
-<p align="center"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/logo.png" width="100%" alt="logo image"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/logo.png" width="60%" alt="logo image"></p>
 
-<p align="center"><a href="https://github.com/trolit/sShuffler/releases/download/v1.1/sShuffler_desktop.zip"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/5.png" width="50%" alt="download image"></a></p>
+<p align="center"><a href="https://github.com/trolit/sShuffler/releases/download/v1.1/sShuffler_desktop.zip"><img src="https://raw.githubusercontent.com/trolit/sShuffler/storage/images/5.png" width="45%" alt="download image"></a></p>
 
 Check for viruses <a href="https://www.virustotal.com/gui/url-analysis/u-9e728f005d4938ca844107d17563e5b59933ac5ece9509a575959eccd515ed14-1586804287/detection">here</a> with VirusTotal.
 
