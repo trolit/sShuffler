@@ -6,6 +6,17 @@ Check for viruses <a href="https://www.virustotal.com/gui/url-analysis/u-9e728f0
 
 <h4>About</h4>
 
+<table>
+  <tbody>
+    <tr>
+      <td>
+        project timeframe
+      </td>
+      <td>12.04.2020 - 13.04.2020 (v1.1)</td>
+    </tr>
+  </tbody>
+</table>
+
 <p align="justify">sShuffler stands for song Shuffler. It is an open source, simple solution that gives playlists second life(literally) by randomly(well, pseudorandomly..) rearranging it. If you listen to the songs in the same order(especially while driving a car), sooner or later you will want to reorder it to make it unpredictable. What you can do is use random play function(if your car owns it).. but that might feel just too random(you don't want to get the same song N times) or.. try software that reorders playlist for you so you don't have to rename songs manually and loose time(I recommend Mp3Tag if you want to sort playlist freely). sShuffler generates output with leading zeros that order is strongly observed by most music players. Created for private purposes but maybe someone will find it useful too :) </p>
 
 <h4>Consider the following situation</h4>
